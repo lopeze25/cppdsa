@@ -47,6 +47,19 @@ struct Node {
 		}
 		std::cout << std::endl; 
 	}
+	// dfs = stack
+	void DFS() {
+		std::stack<Node*> s;
+		s.push(this);
+
+		while (!s.empty()) {
+			Node* current = s.top();
+			s.pop();
+			std::cout << current->data << " "; 
+
+			// Push children onto the stack
+		}
+	}
 };
 
 // A single linked list 
@@ -80,7 +93,18 @@ int main() {
 		current = current->next;
 	
 	}
+
+
 	head->BFS(); 
+
+	//prevent memory leaks
+
+	delete node3;  
+	delete node2;  
+	delete node1;  
+	delete head;  
+
 }
+
 
 

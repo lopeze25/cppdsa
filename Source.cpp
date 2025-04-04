@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 /* 
 struct Node {
 	int data;
@@ -25,10 +26,26 @@ int main() {
 // A N-ary tree
 struct Node {
 	int data;
-	std::vector<Node*> children; 
-	
+	std::vector<Node*> children;
+
 	Node(int val) {
-		data = val; 
+		data = val;
+	}
+
+	void BFS() {
+		std::queue<Node*> q;
+		q.push(this);
+
+		while (!q.empty()) {
+			Node* current = q.front();
+			q.pop();
+			std::cout << current->data << " ";  
+
+			for (Node* child : current->children) {
+				q.push(child);
+			}
+		}
+		std::cout << std::endl; 
 	}
 };
 
@@ -63,7 +80,7 @@ int main() {
 		current = current->next;
 	
 	}
-
+	head->BFS(); 
 }
 
 

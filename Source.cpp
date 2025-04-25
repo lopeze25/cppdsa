@@ -12,6 +12,17 @@ struct LinkedNode {
 	}
 };
 
+struct Node {
+	int data;
+	std::vector<Node*> children;
+
+	Node(int val) {
+		data = val;
+	}
+};
+
+
+
 int binarySearch(const std::vector<int>& arr, int target) {
 	int left = 0, right = arr.size() - 1;
 
@@ -52,6 +63,24 @@ int main() {
 	std::sort(values2.begin(), values2.end());
 	int store = binarySearch(values2, 2);
 	std::cout << "\nValue " << values2[store] << "at index:" << store; 
+
+	Node* head2 = new Node(20);
+	Node* node1 = new Node(30);
+
+	head2->children.push_back(node1);
+
+	Node* node2 = new Node(40);
+	node1->children.push_back(node2);
+
+	Node* node3 = new Node(50);
+	node1->children.push_back(node3);
+
+	
+	delete node3;
+	delete node2;
+	delete node1;
+	delete head2;
+
 
 	return 0;
 

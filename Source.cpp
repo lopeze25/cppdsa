@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <queue>
 
 struct LinkedNode {
 
@@ -19,6 +20,20 @@ struct Node {
 	Node(int val) {
 		data = val;
 	}
+
+	void BFS() {
+		std::queue<Node*> q;
+		q.push(this);
+		while (!q.empty()) {
+			Node* current = q.front();
+			q.pop();
+			std::cout << current->data << "";
+			for (Node* child : current->children) {
+				q.push(child);
+			}
+		}
+		std::cout << std::endl;
+	}
 };
 
 
@@ -36,7 +51,7 @@ int binarySearch(const std::vector<int>& arr, int target) {
 }
 
 int main() {
-
+	printf("text\n");
 	LinkedNode* head = new LinkedNode(10);
 	head->next = new LinkedNode(20);
 	head->next->next = new LinkedNode(30);
@@ -74,11 +89,16 @@ int main() {
 
 	Node* node3 = new Node(50);
 	node1->children.push_back(node3);
+	Node* node4 = new Node(10);
+	node1->children.push_back(node4);
 
+	std::cout << "\n";
+	head2->BFS();
 	
 	delete node3;
 	delete node2;
 	delete node1;
+	delete node4;
 	delete head2;
 
 

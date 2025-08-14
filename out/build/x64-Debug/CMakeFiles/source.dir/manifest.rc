@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/zeke2/Documents/GitHub/cppdsa/out/build/x64-Debug/CMakeFiles/source.dir/embed.manifest"

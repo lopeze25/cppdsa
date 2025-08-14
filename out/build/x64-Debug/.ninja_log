@@ -1,0 +1,11 @@
+# ninja log v5
+7	76	0	C:/Users/zeke2/Documents/GitHub/cppdsa/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	bdf89073bb0d3b13
+99	227	7768517455802241	CMakeFiles/dsa_core.dir/data_structures/Queue.cpp.obj	a7649113a3151383
+106	228	7768517455802241	CMakeFiles/dsa_core.dir/data_structures/Stack.cpp.obj	d430664d556379de
+91	229	7768517455802241	CMakeFiles/dsa_core.dir/data_structures/Heap.cpp.obj	12a835fbc42e174b
+78	516	7768517458724848	CMakeFiles/dsa_core.dir/algorithms/BFS.cpp.obj	8cf4eff3e86e28fc
+85	517	7768517458724848	CMakeFiles/dsa_core.dir/algorithms/DFS.cpp.obj	9a0cf55bd4f49c55
+114	711	7768517460657079	CMakeFiles/dsa_core.dir/src/utils.cpp.obj	f67fe9ec50f5a25e
+711	797	7768517461463840	C:/Users/zeke2/Documents/GitHub/cppdsa/out/lib/Debug/dsa_core.lib	71e7b0f38a42b8dd
+122	852	7768517462077145	CMakeFiles/source.dir/apps/source.cpp.obj	2db5bd888c74970a
+852	2087	7768517466499227	C:/Users/zeke2/Documents/GitHub/cppdsa/out/bin/Debug/source.exe	d0c1e3307d588315
